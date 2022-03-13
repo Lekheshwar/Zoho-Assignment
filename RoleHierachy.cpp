@@ -179,6 +179,7 @@ void getHeight()
     cout << 1 + mx << endl;
 }
 
+/* Top most common boss refers to the root node */
 void commonBoss()
 {
 }
@@ -196,7 +197,9 @@ int main()
     root = rootNode;
     roleNodes[rootRoleName] = rootNode;
 
-    while (true)
+    bool flag = true;
+
+    while (flag)
     {
         cout << "Operations :\n";
         cout << " 1. Add Sub Role.\n";
@@ -257,6 +260,7 @@ int main()
             break;
 
         default:
+            flag = false;
             break;
         }
     }
